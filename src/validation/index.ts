@@ -16,7 +16,7 @@ export const productValidation = (product: {
     price: "",
   };
 
-  const validUrl = /^(ftp|http|http):\/\/[^ "]+$/.test(product.imageURL);
+ const validUrl = /^(ftp|http|https):\/\/[^ "]+$/.test(product.imageURL);
   if (
     !product.title.trim() ||
     product.title.length < 10 ||
