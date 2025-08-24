@@ -11,6 +11,10 @@ const Modal = ({ isOpen, closeModal, title, children }: Iprops) => {
     <>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <div
+            className=" fixed inset-0 backdrop-blur-sm "
+            aria-hidden="true"
+          />
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -44,7 +48,7 @@ const Modal = ({ isOpen, closeModal, title, children }: Iprops) => {
                     </Dialog.Title>
                   )}
 
-                  <div className="mt-4">{children}</div>
+                  <div className="mt-4 ">{children}</div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
